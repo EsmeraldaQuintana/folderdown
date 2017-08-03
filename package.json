@@ -1,38 +1,41 @@
 {
-  "name": "folderdown",
-  "version": "1.0.0",
-  "description": "Generates a folder with markdown-to-html converted files with Showdown.",
-  "license": "MIT",
-  "repository": {
-      "type": "git",
-      "url": "git+https://github.com/EsmeraldaQuintana/folderdown"
-  },
-  "author": {
-      "name": "Esmeralda Quintana",
-      "email": "esmeralda@firedrivendevelopment.net"
-  },
-  "contributors": [{
-      "name": "Matthew Feidt",
-      "email": "w/e he can finish this~",
-      "url": "junior dev thing~"
-  }],
-  "bin": {
-      "folderdown": "folderdown.js"
-  },
-  "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "main": "folderdown.js",
-  "keywords": [
-    "markdown",
-    "HTML"
-  ],
-  "bugs": {
-    "url": "https://github.com/EsmeraldaQuintana/folderdown/issues"
-  },
-  "homepage": "https://github.com/EsmeraldaQuintana/folderdown#readme",
-  "dependencies": {
-    "readline-sync": "^1.4.7",
-    "showdown": "^1.7.1"
-  }
+    "name": "folderdown",
+    "version": "1.0.0",
+    "description": "Generates a folder with markdown-to-html converted files with Showdown.",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/EsmeraldaQuintana/folderdown"
+    },
+    "author": {
+        "name": "Esmeralda Quintana",
+        "email": "esmeralda@firedrivendevelopment.net"
+    },
+    "contributors": [
+        {
+            "name": "Matthew Feidt",
+            "email": "w/e he can finish this~",
+            "url": "junior dev thing~"
+        }
+    ],
+    "bin": {
+        "folderdown": "folderdown.js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "main": "folderdown.js",
+    "keywords": [
+        "markdown",
+        "HTML"
+    ],
+    "bugs": {
+        "url": "https://github.com/EsmeraldaQuintana/folderdown/issues"
+    },
+    "homepage": "https://github.com/EsmeraldaQuintana/folderdown#readme",
+    "dependencies": {
+        "readline-sync": "^1.4.7",
+        "showdown": "^1.7.1",
+        "string": "^3.3.3"
+    }
 }
