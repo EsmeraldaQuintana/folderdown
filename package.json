@@ -2,23 +2,31 @@
   "name": "folderdown",
   "version": "1.0.0",
   "description": "Generates a folder with markdown-to-html converted files with Showdown.",
-  "main": "folderdown.js",
+  "license": "MIT",
+  "repository": {
+      "type": "git",
+      "url": "git+https://github.com/EsmeraldaQuintana/folderdown"
+  },
+  "author": {
+      "name": "Esmeralda Quintana",
+      "email": "esmeralda@firedrivendevelopment.net"
+  },
+  "contributors": [{
+      "name": "Matthew Feidt",
+      "email": "w/e he can finish this~",
+      "url": "junior dev thing~"
+  }],
   "bin": {
-    "folderdown": "folderdown.js"
+      "folderdown": "folderdown.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/EsmeraldaQuintana/folderdown"
-  },
+  "main": "folderdown.js",
   "keywords": [
     "markdown",
     "HTML"
   ],
-  "author": "EsmeraldaQuintana Tempurturtul",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/EsmeraldaQuintana/folderdown/issues"
   },
