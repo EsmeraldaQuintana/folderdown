@@ -1,14 +1,17 @@
 {
-  "name": "md-folder-convert",
+  "name": "folderdown",
   "version": "1.0.0",
-  "description": "Generates a folder with markdown-to-HTML converted files.",
-  "main": "index.js",
+  "description": "Generates a folder with markdown-to-html converted files with Showdown.",
+  "main": "folderdown.js",
+  "bin": {
+    "folderdown": "folderdown.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EsmeraldaQuintana/md-folder-convert.git"
+    "url": "git+https://github.com/EsmeraldaQuintana/folderdown"
   },
   "keywords": [
     "markdown",
@@ -17,10 +20,10 @@
   "author": "EsmeraldaQuintana Tempurturtul",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/EsmeraldaQuintana/md-folder-convert/issues"
+    "url": "https://github.com/EsmeraldaQuintana/folderdown/issues"
   },
-  "homepage": "https://github.com/EsmeraldaQuintana/md-folder-convert#readme",
-  "devDependencies": {
+  "homepage": "https://github.com/EsmeraldaQuintana/folderdown#readme",
+  "dependencies": {
     "readline-sync": "^1.4.7",
     "showdown": "^1.7.1"
   }
