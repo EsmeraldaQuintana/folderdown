@@ -19,8 +19,6 @@ while (!fs.existsSync(filesSrc) && tries<3){
 
 let folderDestName = readlineSync.question('Desired name for destination folder?: ');
 const destination = './' + folderDestName + '/';
-
-// if destination folder doesn't exist, create it.
 if (!fs.existsSync(destination)){
     fs.mkdirSync(destination);
 }
@@ -29,12 +27,12 @@ const files = fs.readdirSync(filesSrc);
 
 files.forEach( function(value) {
     const text = converter.makeHtml(fs.readFileSync(filesSrc + value, "utf8"));
-    const title = readlineSync.question('Name file? ' + value + ' ');
+    const title = readlineSync.question('Name for ' + value + '? ');
     const fullPathDest = destination + title + '.html';
     fs.writeFileSync(fullPathDest, text);
     // console.log(fs.readFileSync(fullPathDest, "utf8"));
-    console.log(fullPathDest + ' created!');
+    console.log(fullPathDest + ' created.');
 });
 
 console.log();
-console.log('Program exited!');
+console.log('Program exited, no errors.');
