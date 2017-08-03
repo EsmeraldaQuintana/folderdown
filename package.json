@@ -1,0 +1,23 @@
+{
+  "name": "md-folder-convert",
+  "version": "1.0.0",
+  "description": "Generates a folder with markdown-to-HTML converted files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EsmeraldaQuintana/md-folder-convert.git"
+  },
+  "keywords": [
+    "markdown",
+    "HTML"
+  ],
+  "author": "EsmeraldaQuintana Tempurturtul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EsmeraldaQuintana/md-folder-convert/issues"
+  },
+  "homepage": "https://github.com/EsmeraldaQuintana/md-folder-convert#readme"
+}
