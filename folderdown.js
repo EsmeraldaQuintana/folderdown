@@ -25,27 +25,53 @@ function run(srcFolder, destFolder) {
     }
     console.log(`folderdown: ${srcFolder} found.`);
 
+    console.log(`beforePP: srcFolder is ${srcFolder} and destFolder is ${destFolder}`);
+    srcFolder = properPath(srcFolder);
+    destFolder = properPath(destFolder);
+    console.log(` afterPP: srcFolder is ${srcFolder} and destFolder is ${destFolder}`);
+
     if (!fs.existsSync(destFolder)){
         fs.mkdirSync(destFolder);
         console.log(`folderdown: ${destFolder} created.`);
     }
-    console.log(`folderdown: ${destFolder} found.`);
 
-    const files = fs.readdirSync(srcFolder);
-    if (files.length === 0) {
-        console.log('Error: No markdown files seen.');
+    let files = fs.readdirSync(srcFolder);
+
+    // filter out non-markdown files
+    files = files.filter(function(value) {
+        return S(value).endsWith('.md');
+    });
+
+    // end if there are no files
+    if (files == undefined || files.length === 0) {
+        console.log('folderdown: Error: No markdown files found. Exiting.');
         process.exit(0);
     }
 
+    console.log(`folderdown: files are ${files}`);
+
     files.forEach( function(value) {
-        const text = converter.makeHtml(
-            fs.readFileSync(srcFolder + value, "utf8"));
+        console.log(`folderdown: srcFolder + value is ${srcFolder + value}`);
+        const text = converter.makeHtml(fs.readFileSync(srcFolder + value, "utf8"));
         const fullPathDest = `${destFolder}${S(value).left(value.length-3).s}.html`;
         fs.writeFileSync(fullPathDest, text);
         // console.log(fs.readFileSync(fullPathDest, "utf8"));
         console.log('folderdown: ' + fullPathDest + ' created.');
     });
     console.log('folderdown: exited, no errors.');
+}
+
+function properPath(str) {
+    if (str == '.')
+        return './';
+    if (S(str).left(1).endsWith('/')) {
+        str = '.' + str;
+    } else {
+        str = './' + str;
+    }
+    if (!S(str).right(1).endsWith('/'))
+        str = str + '/';
+    return str;
 }
 
 exports.run = run;
